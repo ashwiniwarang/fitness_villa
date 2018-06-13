@@ -21,5 +21,6 @@ Route::get('/chart', 'AdminController@chart');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
-
+Route::get('members','MembersController@index');
+Route::get('member/add','MembersController@create');
 
