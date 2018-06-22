@@ -14,30 +14,30 @@
 
     <!-- Fontfaces CSS-->
     <link href="{{url('css/font-face.css')}}" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="{{url('vendor/font-awesome-4.7/css/font-awesome.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('vendor/font-awesome-5/css/fontawesome-all.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('vendor/mdi-font/css/material-design-iconic-font.min.css')}}" rel="stylesheet" media="all">
 
     <!-- Bootstrap CSS-->
-    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="{{url('vendor/bootstrap-4.1/bootstrap.min.css')}}" rel="stylesheet" media="all">
 
     <!-- Vendor CSS-->
-    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
-    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
-    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
-    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="{{url('vendor/animsition/animsition.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('vendor/wow/animate.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('vendor/css-hamburgers/hamburgers.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('vendor/slick/slick.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('vendor/select2/select2.min.css')}}" rel="stylesheet" media="all">
+    <link href="{{url('vendor/perfect-scrollbar/perfect-scrollbar.css')}}" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
     <link href="{{url('css/theme.css')}}" rel="stylesheet" media="all">
 
     <!-- CSS From Gymie github -->
     <!-- BEGIN CORE FRAMEWORK -->
-    <link href="{{ URL::asset('assets/plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/plugins/ionicons/css/ionicons.min.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" />
+    <link href="{{url('assets/plugins/bootstrap/css/bootstrap.css') }}" rel="stylesheet" />
+    <link href="{{url('assets/plugins/ionicons/css/ionicons.min.css') }}" rel="stylesheet" />
+    <link href="{{url('assets/plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" />
     <!-- END CORE FRAMEWORK -->
     
     <!-- BEGIN PLUGIN STYLES -->
@@ -55,14 +55,17 @@
     <!-- END PLUGIN STYLES -->
     
     <!-- BEGIN THEME STYLES -->
-    <link href="{{ URL::asset('assets/css/material.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/css/plugins.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/css/helpers.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/css/responsive.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/css/mystyle.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/css/print.css') }}" media="print" rel="stylesheet" />
+    <link href="{{url('assets/css/material.css') }}" rel="stylesheet" />
+    <link href="{{url('assets/css/style.css') }}" rel="stylesheet" />
+    <link href="{{url('assets/css/plugins.css') }}" rel="stylesheet" />
+    <link href="{{url('assets/css/helpers.css') }}" rel="stylesheet" />
+    <link href="{{url('assets/css/responsive.css') }}" rel="stylesheet" />
+    <link href="{{url('assets/css/mystyle.css') }}" rel="stylesheet" />
+    <link href="{{url('assets/css/print.css') }}" media="print" rel="stylesheet" />
     <!-- END THEME STYLES -->
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{{url('css/common.css')}}">
 
 </head>
 
@@ -74,7 +77,7 @@
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
-                            <img src="images/icon/logo.png" alt="CoolAdmin" />
+                            <img src="{{url('images/icon/logo.png')}}" alt="CoolAdmin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -189,7 +192,7 @@
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                    <img src="{{url('images/icon/logo.png')}}" alt="Cool Admin" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -216,10 +219,10 @@
                                 <i class="ion-person-add"></i>Members</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="index.html">All members</a>
+                                    <a href="{{url('members')}}">All members</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('member/add')}}">Add Member</a>
+                                    <a href="{{url('members/create')}}">Add Member</a>
                                 </li>
                                 <li>
                                     <a href="index3.html">Active Members</a>
@@ -541,28 +544,79 @@
 </div>
 
 <!-- Jquery JS-->
-<script src="vendor/jquery-3.2.1.min.js"></script>
+<script src="{{url('vendor/jquery-3.2.1.min.js')}}"></script>
 <!-- Bootstrap JS-->
-<script src="vendor/bootstrap-4.1/popper.min.js"></script>
-<script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+<script src="{{url('vendor/bootstrap-4.1/popper.min.js')}}"></script>
+<script src="{{url('vendor/bootstrap-4.1/bootstrap.min.js')}}"></script>
 <!-- Vendor JS       -->
-<script src="vendor/slick/slick.min.js">
+<script src="{{url('vendor/slick/slick.min.js')}}">
 </script>
-<script src="vendor/wow/wow.min.js"></script>
-<script src="vendor/animsition/animsition.min.js"></script>
-<script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+<script src="{{url('vendor/wow/wow.min.js')}}"></script>
+<script src="{{url('vendor/animsition/animsition.min.js')}}"></script>
+<script src="{{url('vendor/bootstrap-progressbar/bootstrap-progressbar.min.js')}}">
 </script>
-<script src="vendor/counter-up/jquery.waypoints.min.js"></script>
-<script src="vendor/counter-up/jquery.counterup.min.js">
+<script src="{{url('vendor/counter-up/jquery.waypoints.min.js')}}"></script>
+<script src="{{url('vendor/counter-up/jquery.counterup.min.js')}}">
 </script>
-<script src="vendor/circle-progress/circle-progress.min.js"></script>
-<script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-<script src="vendor/chartjs/Chart.bundle.min.js"></script>
-<script src="vendor/select2/select2.min.js">
+<script src="{{url('vendor/circle-progress/circle-progress.min.js')}}"></script>
+<script src="{{url('vendor/perfect-scrollbar/perfect-scrollbar.js')}}"></script>
+<script src="{{url('vendor/chartjs/Chart.bundle.min.js')}}"></script>
+<script src="{{url('vendor/select2/select2.min.js')}}">
 </script>
 
 <!-- Main JS-->
-<script src="js/main.js"></script>
+<script src="{{url('js/main.js')}}"></script>
+
+<!-- BEGIN JAVASCRIPTS -->
+
+<!-- BEGIN CORE PLUGINS -->
+<!-- <script src="{{url('assets/plugins/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
+<script src="{{url('assets/plugins/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
+<script src="{{url('assets/plugins/pace/pace.min.js') }}" type="text/javascript"></script>
+<script src="{{url('assets/plugins/slimScroll/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
+<script src="{{url('assets/plugins/bootstrap-select/js/bootstrap-select.min.js') }}" type="text/javascript"></script>
+<script src="{{url('assets/plugins/bootstrap-tokenfield/bootstrap-tokenfield.min.js') }}" type="text/javascript"></script>
+<script src="{{url('assets/plugins/sweetalert/sweetalert.min.js') }}" type="text/javascript"></script>
+<script src="{{url('assets/js/core.js') }}" type="text/javascript"></script>
+<!-- END CORE PLUGINS --> -->
+
+<!-- datepicker -->
+<script src="{{url('assets/plugins/bootstrap-daterangepicker/moment.min.js') }}" type="text/javascript"></script>
+<script src="{{url('assets/plugins/bootstrap-daterangepicker/daterangepicker.js') }}" type="text/javascript"></script>
+
+<!-- counter -->
+<script src="{{url('assets/plugins/jquery-countTo/jquery.countTo.js') }}" type="text/javascript"></script>
+
+<!-- datepicker -->
+<script src="{{url('assets/plugins/datepicker/js/bootstrap-datepicker.min.js') }}" type="text/javascript"></script>
+
+<!--validator-->
+<script src="{{url('assets/plugins/bootstrapValidator/bootstrapValidator.min.js') }}" type="text/javascript"></script>
+
+{{-- @include('_jsVariables') --}}
+
+<!--Footer scripts-->
+@yield('footer_scripts')
+
+<!-- maniac -->
+<script src="{{url('assets/js/maniac.js') }}" type="text/javascript"></script>
+
+@yield('footer_script_init')
+
+<!-- dashboard -->
+<script type="text/javascript">
+
+$(document).ready(function(){
+    gymie.loadcounter();
+    gymie.loadprogress();
+    gymie.loaddatepicker();
+    gymie.loaddaterangepicker();
+    gymie.loadbsselect();
+});
+    
+</script> 
+
+<!-- END JAVASCRIPTS -->
 
 </body>
 
